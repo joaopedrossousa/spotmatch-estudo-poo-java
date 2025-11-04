@@ -1,5 +1,5 @@
-import model.Audio;
-import utils.Musica;
+import br.com.desaf.alura.model.utils.Musica;
+import br.com.desaf.alura.model.utils.Podcast;
 
 import java.util.Scanner;
 
@@ -8,9 +8,14 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Musica musica = new Musica();
+        Podcast podcast = new Podcast();
 
         musica.setTitulo("Sunglasses At Night - Corey Hart");
         musica.setDuracao(5.20);
+
+        podcast.setTitulo("Mundo Freak - Especial Operação Prato");
+        podcast.setDuracao(60.30);
+
 
         while (true) {
 
@@ -36,9 +41,16 @@ public class Main {
                 musica.informacoesMusica();
 
 
-            }
-                
+            } else if (opcaoSelecionada == 2) {
+                podcast.reproduzir();
+                System.out.println(" ");
+                podcast.avaliacao();
+                podcast.informacoesPodcast();
+
+            }else {
+                System.out.println("Opção invalida...");
             }
         }
     }
+}
 

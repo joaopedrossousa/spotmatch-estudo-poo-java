@@ -1,4 +1,4 @@
-package model;
+package br.com.desaf.alura.model;
 
 public class Audio {
     private String titulo;
