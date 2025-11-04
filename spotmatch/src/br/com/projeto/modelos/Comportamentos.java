@@ -1,4 +1,4 @@
-package br.com.desaf.alura.model.utils;
+package br.com.projeto.modelos;
 
 public interface Comportamentos {
     void reproduzir();

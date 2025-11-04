@@ -1,7 +1,7 @@
-import br.com.desaf.alura.model.utils.Musica;
-import br.com.desaf.alura.model.utils.Podcast;
 
 import java.util.Scanner;
+import br.com.projeto.modelos.Musica;
+import br.com.projeto.modelos.Podcast;
 
 public class Main {
 
@@ -9,6 +9,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Musica musica = new Musica();
         Podcast podcast = new Podcast();
+
 
         musica.setTitulo("Sunglasses At Night - Corey Hart");
         musica.setDuracao(5.20);
@@ -53,4 +54,3 @@ public class Main {
         }
     }
 }
-

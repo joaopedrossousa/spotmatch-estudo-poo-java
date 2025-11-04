@@ -1,18 +1,16 @@
-package br.com.desaf.alura.model.utils;
+package br.com.projeto.modelos;
 
-import br.com.desaf.alura.model.Audio;
+import br.com.projeto.principal.Audio;
 
 import java.util.Scanner;
 
-public class Musica extends Audio implements Comportamentos{
+public class Podcast extends Audio implements Comportamentos {
     //Contrutor para atribuir e icremetar a quantidade de visualizacoes;
-    public Musica(){
-        this.totalDeReproducoes = 1000;
+    public Podcast(){
+        this.totalDeReproducoes = 500;
         this.curtidas = 0;
-        this.classificacao = 3.8;
+        this.classificacao = 3.2;
     }
-
-
 
     @Override
     public void reproduzir() {
@@ -28,7 +26,7 @@ public class Musica extends Audio implements Comportamentos{
     @Override
     public void avaliacao() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Curtir música? [1] SIM [2] NÃO");
+        System.out.println("Curtir Podcast? [1] SIM [2] NÃO");
         int opcaoSelecionada = scanner.nextInt();
         if (opcaoSelecionada == 1){
             curtidas += 1;
@@ -38,15 +36,11 @@ public class Musica extends Audio implements Comportamentos{
         classificacao = ((classificacao * totalDeReproducoes) + notaInformada) / totalDeReproducoes;
 
     }
-
-    public void informacoesMusica(){
+    public void informacoesPodcast(){
         System.out.println("Total de Visualizações: " + totalDeReproducoes);
         System.out.println("Total de Curtidas " + curtidas);
         System.out.println("Média de Avaliações: %.1f".formatted(classificacao));
 
     }
-
-
-
 
 }
